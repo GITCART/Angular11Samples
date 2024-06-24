@@ -1,11 +1,12 @@
 import { Injectable } from '@angular/core';
-import { Http } from '@angular/http';
+
 
 import { Passenger } from './models/passenger.interface';
+import {HttpClient} from '@angular/common/http';
 
 @Injectable()
 export class PassengerDashboardService {
-  constructor(private http: Http) {}
+  constructor(private http: HttpClient) {}
 
   getPassengers(): Passenger[] {
     return [{

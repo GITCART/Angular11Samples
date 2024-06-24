@@ -20,7 +20,8 @@ import { Passenger } from '../../models/passenger.interface';
         (remove)="handleRemove($event)">
       </passenger-detail>
     </div>
-  `
+  `,
+
 })
 export class PassengerDashboardComponent implements OnInit {
   passengers: Passenger[];

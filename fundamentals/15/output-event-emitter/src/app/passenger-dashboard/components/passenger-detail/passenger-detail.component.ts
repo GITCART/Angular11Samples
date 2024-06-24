@@ -9,8 +9,8 @@ import { Passenger } from '../../models/passenger.interface';
     <div>
       <span class="status" [class.checked-in]="detail.checkedIn"></span>
       <div *ngIf="editing">
-        <input 
-          type="text" 
+        <input
+          type="text"
           [value]="detail.fullname"
           (input)="onNameChange(name.value)"
           #name>
@@ -19,7 +19,7 @@ import { Passenger } from '../../models/passenger.interface';
         {{ detail.fullname }}
       </div>
       <div class="date">
-        Check in date: 
+        Check in date:
         {{ detail.checkInDate ? (detail.checkInDate | date: 'yMMMMd' | uppercase) : 'Not checked in' }}
       </div>
       <div class="children">
@@ -46,16 +46,14 @@ export class PassengerDetailComponent {
   remove: EventEmitter<any> = new EventEmitter();
 
   editing: boolean = false;
-  
+
   constructor() {}
-  
+
   onNameChange(value: string) {
-    debugger;
     this.detail.fullname = value;
   }
-  
+
   toggleEdit() {
-    debugger;
     if (this.editing) {
       this.edit.emit(this.detail);
     }

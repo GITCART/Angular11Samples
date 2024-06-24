@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { HttpModule } from '@angular/http';
+
 
 // containers
 import { PassengerDashboardComponent } from './containers/passenger-dashboard/passenger-dashboard.component';
@@ -11,6 +11,7 @@ import { PassengerDetailComponent } from './components/passenger-detail/passenge
 
 // service
 import { PassengerDashboardService } from './passenger-dashboard.service';
+import {HttpClientModule} from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,7 @@ import { PassengerDashboardService } from './passenger-dashboard.service';
   ],
   imports: [
     CommonModule,
-    HttpModule
+    HttpClientModule
   ],
   exports: [
     PassengerDashboardComponent

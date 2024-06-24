@@ -2,7 +2,7 @@
   "passengers": [
     {
       "id": 2,
-      "fullname": "Jose",
+      "fullname": "Jose Diaz",
       "checkedIn": false,
       "checkInDate": null,
       "children": [
